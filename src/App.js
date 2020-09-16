@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { ReactComponent as TwitterIcon } from './icons/twitter.svg';
-import { ReactComponent as FacebookIcon } from './icons/facebook.svg';
-import { ReactComponent as InstagramIcon } from './icons/instagram.svg';
-import { ReactComponent as BookerLogo } from './icons/logo.svg';
+import { Facebook, Twitter, YouTube, Instagram } from '@material-ui/icons';
+import { ReactComponent as PaulaJeanLogo } from './icons/logo.svg';
 import './App.scss';
 import ImageGenerator from './ImageGenerator';
 import html2canvas from 'html2canvas';
@@ -136,11 +134,11 @@ class App extends Component {
 			<div className="App">
 				{/* header */}
 				<header className="App-header">
-					<BookerLogo />
+					<PaulaJeanLogo />
 					<div className="text">
-						<h1>I Endorse Booker</h1>
+						<h1>I Endorse Paula Jean</h1>
 						<p>
-							Create your own endorsement graphic for Booker to share over
+							Create your own endorsement graphic for Paula Jean to share over
 							Instagram, Twitter, Facebook, emails, and so forth!
 						</p>
 					</div>
@@ -192,7 +190,7 @@ class App extends Component {
                     required
                   />
                   <label htmlFor="blurb">
-                    Why do you endorse Charles Booker?
+                    Why do you endorse Paula Jean Swearengin?
                   </label>
                 </div>
 
@@ -322,27 +320,33 @@ class App extends Component {
 						{/* social */}
 						<div className="social">
 							<a
-								href="https://twitter.com/Booker4KY"
-								target="_blank"
-								rel="noopener noreferrer">
-								<TwitterIcon />
+									href="https://www.facebook.com/PaulaJean2020"
+									target="_blank"
+									rel="noopener noreferrer">
+								<Facebook style={{ color: "black" }} />
 							</a>
 							<a
-								href="https://www.facebook.com/Booker4KY/"
+								href="https://twitter.com/paulajean2020"
 								target="_blank"
 								rel="noopener noreferrer">
-								<FacebookIcon />
+								<Twitter style={{ color: "black" }} />
 							</a>
 							<a
-								href="https://www.instagram.com/booker4ky"
+								href="https://www.youtube.com/channel/UCS13Bc2abLkLym-7NkNOiRQ/"
 								target="_blank"
 								rel="noopener noreferrer">
-								<InstagramIcon />
+								<YouTube style={{ color: "black" }} />
+							</a>
+							<a
+								href="https://www.instagram.com/paulajeanwv2020"
+								target="_blank"
+								rel="noopener noreferrer">
+								<Instagram style={{ color: "black" }} />
 							</a>
 							<p>
 								If you like this, please follow me on social media — and say
 								hello! And when you share your image include the hashtag{' '}
-								<span className="bold">#IEndorseBooker</span>.
+								<span className="bold">#IEndorsePaulaJean</span>.
 							</p>
 						</div>
 					</div>

@@ -1,6 +1,6 @@
-# iendorsebooker.com
+# iendorsepaulajean.com
 
-_[Make your own](https://iendorsebooker.com/) supporter graphic for [Charles Booker](https://bookerforkentucky.com/) to share on social media!_
+_[Make your own](https://iendorsepaulajean.com/) supporter graphic for [Paula Jean Swearengin](https://paulajean.com/) to share on social media!_
 
 ## About
 
@@ -15,9 +15,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Developed by
+## Developed from
 
-[Abby Benvenutti](https://github.com/abbybenvenutti)<br/>
-[Esther Park](https://github.com/epark17)<br/>
-[Jordan Davis](https://github.com/jtdavis9311)<br/>
-[Keyairra Wright](https://github.com/Keyairra-S-Wright)<br/>
+[iendorsebooker](https://github.com/abbybenvenutti/iendorsebooker)<br/>
+
+## Edited by
+
+[Abby Beeler](https://github.com/AbbyB)<br/>

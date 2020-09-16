@@ -25,7 +25,7 @@ export default function ImageGenerator(props) {
         <div className="endorsement">
           <h2 className="name-output">{props.name}</h2>
           <h2>
-            <i>endorses</i> Booker
+            <i>endorses</i> Paula Jean
           </h2>
         </div>
 
@@ -38,10 +38,10 @@ export default function ImageGenerator(props) {
       {/* fine print */}
       <div className="fine-print" style={{ zIndex: 3 }}>
         <p>
-          Generated at IENDORSEBOOKER.COM{' '}
-          <span className="bold">#IEndorseBooker</span>
+          Generated at IENDORSEPAULAJEAN.COM{' '}
+          <span className="bold">#IEndorsePaulaJean</span>
         </p>
-        <img src="/img/booker-logo.png" alt="Booker logo" />
+        <img src="/img/paula-jean-logo.png" alt="Paula Jean logo" />
       </div>
 
       {/* background color */}
