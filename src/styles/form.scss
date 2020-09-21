@@ -11,7 +11,7 @@ form {
     display: block;
     transition: all 0.2s;
     touch-action: manipulation;
-    font: 20px/1.6 freight-sans-condensed-pro, Helvetica, Helvetica Neue, Arial;
+    font: 20px/1.6 $body-fonts;
     font-weight: 400;
   }
 
@@ -34,7 +34,7 @@ form {
       cursor: pointer;
 
       &:hover {
-        background-color: $booker-green;
+        background-color: $tertiary-color;
         color: var(--body-background);
       }
     }
@@ -52,7 +52,7 @@ form {
     -webkit-text-fill-color: var(--body-text);
     -webkit-box-shadow: 0 0 0px 1000px var(--body-background) inset;
     transition: background-color 5000s ease-in-out 0s;
-    font: 20px/1.6 freight-sans-condensed-pro, Helvetica, Helvetica Neue, Arial;
+    font: 20px/1.6 $body-fonts;
     font-weight: 400;
   }
 
@@ -183,13 +183,16 @@ form {
     }
 
     #purpleBG {
-      background-color: $booker-purple;
+      background-color: $primary-color;
     }
-    #yellowBG {
-      background-color: $booker-yellow;
+    #blueBG {
+      background-color: $secondary-color;
     }
-    #greenBG {
-      background-color: $booker-green;
+    #tealBG {
+      background-color: $tertiary-color;
+    }
+    #royalBG {
+      background-color: $quaternary-color;
     }
   }
 

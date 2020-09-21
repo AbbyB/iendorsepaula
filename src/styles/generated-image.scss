@@ -12,7 +12,7 @@ div#generated-image {
     overflow: hidden;
     @include flex(flex, row, center, center);
     border-radius: 50%;
-    border: 8px solid $booker-yellow;
+    border: 8px solid $secondary-color;
     margin: 0 0 0 20px;
     // z-index: 1;
 
@@ -39,7 +39,7 @@ div#generated-image {
 
     // location
     .location {
-      background-color: $booker-green;
+      background-color: $tertiary-color;
       color: white;
       width: fit-content;
       padding: 0 30px;
@@ -51,10 +51,10 @@ div#generated-image {
 
       h2 {
         background-color: white;
-        color: $booker-purple;
+        color: $primary-color;
         width: fit-content;
         i {
-          color: $booker-green;
+          color: $tertiary-color;
         }
         line-height: 1.2;
         &.name-output{ margin-bottom: 2px; }
@@ -126,29 +126,35 @@ div#generated-image {
 
   &.purpleBg {
     .background-color {
-      background-color: $booker-purple;
+      background-color: $primary-color;
     }
     .overlay-color {
-      // $booker-purple;
-      background-color: rgba(42, 30, 81, 0.3);
+      background-color: rgba($primary-color, 0.3);
     }
   }
-  &.yellowBg {
+  &.blueBg {
     .background-color {
-      background-color: $booker-yellow;
+      background-color: $secondary-color;
     }
     .overlay-color {
-      // $booker-yellow;
-      background-color: rgba(246, 197, 79, 0.3);
+      background-color: rgba($secondary-color, 0.3);
     }
   }
-  &.greenBg {
+  &.tealBg {
     .background-color {
-      background-color: $booker-green;
+      background-color: $tertiary-color;
+    }
+
+    .overlay-color {
+      background-color: rgba($tertiary-color, 0.3);
+    }
+  }
+  &.royalBg {
+    .background-color {
+      background-color: $quaternary-color;
     }
     .overlay-color {
-      // $booker-green;
-      background-color: rgba(78, 157, 133, 0.3);
+      background-color: rgba($quaternary-color, 0.3);
     }
   }
 
@@ -177,7 +183,7 @@ div#generated-image {
     .avatar-container {
       height: 100px;
       width: 100px;
-      border: 2px solid $booker-yellow;
+      border: 2px solid $secondary-color;
       margin-left: 10px;
     }
 

@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Facebook, Twitter, YouTube, Instagram } from '@material-ui/icons';
-import { ReactComponent as PaulaJeanLogo } from './icons/logo.svg';
+import { ReactComponent as HeaderLogo } from './img/header-logo.svg';
+import defaultPhoto from './img/default.jpg';
+import disclaimer from './img/disclaimer.png';
+import photo1 from './img/photo1.png';
+import photo2 from './img/photo2.jpg';
+import photo3 from './img/photo3.jpg';
 import './App.scss';
 import ImageGenerator from './ImageGenerator';
 import html2canvas from 'html2canvas';
@@ -16,12 +21,10 @@ class App extends Component {
 			blurb: '',
 			bgPhoto: '',
 			bgColor: '',
-			showGeneratedImage: false,
 			isIE: false,
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.readFile = this.readFile.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
 		this.makeCanvas = this.makeCanvas.bind(this);
 	}
 
@@ -40,65 +43,47 @@ class App extends Component {
 		}
 	}
 
-	handleSubmit(e) {
-		e.preventDefault();
-
-		// change name font-size to fit
-		fitty('.name-output', { maxSize: 50 });
-
-		this.setState(
-			{
-				...this.state,
-				showGeneratedImage: true,
-			},
-			() => this.makeCanvas()
-		);
-	}
-
 	makeCanvas() {
 		let divImage = document.getElementById('generated-image');
 		let button = document.getElementById('btn-download');
 		const androidDevice = window.navigator.userAgent.indexOf('Android');
 
-		// otherwise generated-image and button are hidden
-		if (this.state.showGeneratedImage) {
-			let distanceFromTop =
-				divImage.getBoundingClientRect().top + window.pageYOffset;
+		let distanceFromTop =
+			divImage.getBoundingClientRect().top + window.pageYOffset;
 
-			// NOTE: mobile
-			if (window.innerWidth < 766 && androidDevice < 0) {
-				// create canvas from html element
-				html2canvas(divImage, {
-					useCORS: true,
-					scrollX: 0,
-					scrollY: -window.scrollY,
-					height: divImage.offsetHeight,
-					y: distanceFromTop,
-				}).then((canvas) => {
-					// convert canvas to blob
-					canvas.toBlob(function (blob) {
-						// set href of download button
-						button.href = URL.createObjectURL(blob);
-					});
+		// NOTE: mobile
+		if (window.innerWidth < 766 && androidDevice < 0) {
+			// create canvas from html element
+			html2canvas(divImage, {
+				useCORS: true,
+				scrollX: 0,
+				scrollY: -window.scrollY,
+				height: divImage.offsetHeight,
+				y: distanceFromTop,
+			}).then((canvas) => {
+				// convert canvas to blob
+				canvas.toBlob(function (blob) {
+					// set href of download button
+					button.href = URL.createObjectURL(blob);
 				});
-			}
-			// NOTE: desktop
-			else {
-				// create canvas from html element
-				html2canvas(divImage, {
-					useCORS: true,
-					scrollX: 0,
-					scrollY: -window.scrollY,
-					height: divImage.offsetHeight,
-					width: divImage.offsetWidth,
-				}).then((canvas) => {
-					// convert canvas to blob
-					canvas.toBlob(function (blob) {
-						// set href of download button
-						button.href = URL.createObjectURL(blob);
-					});
+			});
+		}
+		// NOTE: desktop
+		else {
+			// create canvas from html element
+			html2canvas(divImage, {
+				useCORS: true,
+				scrollX: 0,
+				scrollY: -window.scrollY,
+				height: divImage.offsetHeight,
+				width: divImage.offsetWidth,
+			}).then((canvas) => {
+				// convert canvas to blob
+				canvas.toBlob(function (blob) {
+					// set href of download button
+					button.href = URL.createObjectURL(blob);
 				});
-			}
+			});
 		}
 	}
 
@@ -122,9 +107,9 @@ class App extends Component {
 
 		// set defaults
 		this.setState({
-			file: '/img/default.jpg',
+			file: defaultPhoto,
+			bgPhoto: photo1,
 			bgColor: 'purpleBg',
-			bgPhoto: '/img/photo1.png',
 			isIE: old_ie > -1 || new_ie > -1,
 		});
 	}
@@ -134,7 +119,7 @@ class App extends Component {
 			<div className="App">
 				{/* header */}
 				<header className="App-header">
-					<PaulaJeanLogo />
+					<HeaderLogo />
 					<div className="text">
 						<h1>I Endorse Paula Jean</h1>
 						<p>
@@ -151,7 +136,7 @@ class App extends Component {
 						</div>
 					) : (
 						<div className="left-group">
-							<form onSubmit={this.handleSubmit}>
+							<form>
 								{/* name */}
 								<div className="input-group standard">
 									<input
@@ -175,7 +160,7 @@ class App extends Component {
 										value={this.state.location}
 										required
 									/>
-									<label htmlFor="location">Job Title/Location</label>
+									<label htmlFor="location">Job Title/ Location</label>
 								</div>
 
                 {/* blurb */}
@@ -206,7 +191,7 @@ class App extends Component {
 									<img
 										id="output"
 										src={
-											this.state.file === '/img/default.jpg'
+											this.state.file === defaultPhoto
 												? null
 												: this.state.file
 										}
@@ -227,17 +212,25 @@ class App extends Component {
 									<input
 										type="radio"
 										name="bgColor"
-										id="yellowBG"
-										value="yellowBg"
-										checked={this.state.bgColor === 'yellowBg'}
+										id="blueBG"
+										value="blueBg"
+										checked={this.state.bgColor === 'blueBg'}
 										onChange={this.handleChange}
 									/>
 									<input
 										type="radio"
 										name="bgColor"
-										id="greenBG"
-										value="greenBg"
-										checked={this.state.bgColor === 'greenBg'}
+										id="tealBG"
+										value="tealBg"
+										checked={this.state.bgColor === 'tealBg'}
+										onChange={this.handleChange}
+									/>
+									<input
+										type="radio"
+										name="bgColor"
+										id="royalBG"
+										value="royalBg"
+										checked={this.state.bgColor === 'royalBg'}
 										onChange={this.handleChange}
 									/>
 									<label htmlFor="bgColor">Color</label>
@@ -251,52 +244,49 @@ class App extends Component {
 												type="radio"
 												name="bgPhoto"
 												id="choice-1"
-												value="/img/photo1.png"
-												checked={this.state.bgPhoto === '/img/photo1.png'}
+												value={photo1}
+												checked={this.state.bgPhoto === photo1}
 												onChange={this.handleChange}
 											/>
-											<img src="/img/photo1.png" name="photo1" alt="" />
+											<img src={photo1} name="photo1" alt="" />
 										</div>
 										<div className="img-radio">
 											<input
 												type="radio"
 												name="bgPhoto"
 												id="choice-2"
-												value="/img/photo2.jpg"
-												checked={this.state.bgPhoto === '/img/photo2.jpg'}
+												value={photo2}
+												checked={this.state.bgPhoto === photo2}
 												onChange={this.handleChange}
 											/>
-											<img src="/img/photo2.jpg" name="photo2" alt="" />
+											<img src={photo2} name="photo2" alt="" />
 										</div>
 										<div className="img-radio">
 											<input
 												type="radio"
 												name="bgPhoto"
 												id="choice-3"
-												value="/img/photo3.jpg"
-												checked={this.state.bgPhoto === '/img/photo3.jpg'}
+												value={photo3}
+												checked={this.state.bgPhoto === photo3}
 												onChange={this.handleChange}
 											/>
-											<img src="/img/photo3.jpg" name="photo3" alt="" />
+											<img src={photo3} name="photo3" alt="" />
 										</div>
 									</div>
 
 									<label htmlFor="bgPhoto">Image</label>
 								</div>
-
-								{/* submit */}
-								<input type="submit" name="Generate!" />
 							</form>
 						</div>
 					)}
 
 					<div className="right-group">
 						{/* generated image */}
-						{this.state.showGeneratedImage ? (
+						{
 							<div>
 								<ImageGenerator
-									name={this.state.name}
-									location={this.state.location}
+									name={this.state.name ? this.state.name : 'Your Name Here'}
+									location={this.state.location ? this.state.location : 'Voter, United States of America'}
 									file={this.state.file}
 									blurb={this.state.blurb}
 									bgColor={this.state.bgColor}
@@ -312,10 +302,7 @@ class App extends Component {
 									Download
 								</a>
 							</div>
-						) : (
-							// example image
-							<img className="example" src="/img/example.png" alt="example" />
-						)}
+						}
 
 						{/* social */}
 						<div className="social">
@@ -323,25 +310,25 @@ class App extends Component {
 									href="https://www.facebook.com/PaulaJean2020"
 									target="_blank"
 									rel="noopener noreferrer">
-								<Facebook style={{ color: "black" }} />
+								<Facebook />
 							</a>
 							<a
 								href="https://twitter.com/paulajean2020"
 								target="_blank"
 								rel="noopener noreferrer">
-								<Twitter style={{ color: "black" }} />
+								<Twitter />
 							</a>
 							<a
 								href="https://www.youtube.com/channel/UCS13Bc2abLkLym-7NkNOiRQ/"
 								target="_blank"
 								rel="noopener noreferrer">
-								<YouTube style={{ color: "black" }} />
+								<YouTube />
 							</a>
 							<a
 								href="https://www.instagram.com/paulajeanwv2020"
 								target="_blank"
 								rel="noopener noreferrer">
-								<Instagram style={{ color: "black" }} />
+								<Instagram />
 							</a>
 							<p>
 								If you like this, please follow me on social media — and say
@@ -354,7 +341,7 @@ class App extends Component {
 				<footer className="App-footer">
 					<img
 						className="disclaimer"
-						src="/img/disclaimer.png"
+						src={disclaimer}
 						alt="Disclaimer"
 					/>
 				</footer>

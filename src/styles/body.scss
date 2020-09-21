@@ -20,12 +20,6 @@ section.body {
       width: 32vw;
     }
 
-    // example image
-    .example {
-      width: 100%;
-      height: auto;
-    }
-
     // social media links
     .social {
       margin: $vertical-small 0;
@@ -35,12 +29,10 @@ section.body {
         height: 30px;
         margin-right: 20px;
 
-        g {
-          fill: var(--body-text);
-        }
+        fill: var(--body-text);
 
         &:hover {
-          g { fill: $booker-green; }
+          fill: $tertiary-color;
         }
       }
     }
@@ -56,7 +48,7 @@ section.body {
       text-align: center;
 
       &:hover {
-        background-color: $booker-green;
+        background-color: $tertiary-color;
         color: var(--body-background);
       }
     }

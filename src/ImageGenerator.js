@@ -1,8 +1,8 @@
 import React from 'react';
+import endorsementLogo from './img/endorsement-logo.png';
 
 export default function ImageGenerator(props) {
   return (
-    // <canvas id="canvas" >
     <div id="generated-image" className={props.bgColor}>
       {/* background image */}
       <img
@@ -38,10 +38,10 @@ export default function ImageGenerator(props) {
       {/* fine print */}
       <div className="fine-print" style={{ zIndex: 3 }}>
         <p>
-          Generated at IENDORSEPAULAJEAN.COM{' '}
+          Generated at IEndorsePaulaJean.COM{' '}
           <span className="bold">#IEndorsePaulaJean</span>
         </p>
-        <img src="/img/paula-jean-logo.png" alt="Paula Jean logo" />
+        <img src={endorsementLogo} alt="Paula Jean logo" />
       </div>
 
       {/* background color */}

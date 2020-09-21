@@ -13,18 +13,18 @@ $horizontal-padding: 9vw;
 Colors
 ----------------------------------------
 */
-$booker-purple: #2a1e51;
-$booker-yellow: #f6c54f;
-$booker-green: #4e9d85;
+$primary-color: #5F2787;
+$secondary-color: #51A3D4;
+$tertiary-color: #76CBC7;
+$quaternary-color: #332A56;
+$white: #F3F1F1;
 
 :root {
-  color-scheme: light dark;
-
   --color-Link: hsl(202, 65%, 63%);
   --body-background: white;
   --body-text: hsl(0, 0%, 13%);
-  --header-background: #2a1e51;
-  --header-text: #f6c54f;
+  --header-background: #5F2787;
+  --header-text: #F3F1F1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,17 +32,40 @@ $booker-green: #4e9d85;
     --color-Link: hsl(202, 65%, 63%);
     --body-background: #202020;
     --body-text: hsl(0, 0%, 87%);
-    --header-background: #f6c54f;
-    --header-text: #2a1e51;
+    --header-background: #51A3D4;
+    --header-text: #5F2787;
   }
 }
 
 /*
 ----------------------------------------
-Resposive Helpers
+Responsive Helpers
 ----------------------------------------
 */
 
 $tablet: 'screen and (max-width: 1099px) and (min-width: 767px)';
 $tablet-portrait: 'screen and (max-width: 939px) and (min-width: 767px)';
 $phone: 'screen and (max-width: 766px)';
+
+/*
+----------------------------------------
+Fonts
+----------------------------------------
+*/
+
+@font-face {
+  font-family: 'Myriad Pro';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('fonts/MYRIADPRO-REGULAR.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Myriad Pro Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Semibold'), url('fonts/MYRIADPRO-SEMIBOLD.woff') format('woff');
+}
+
+$body-fonts: 'Myriad Pro', Sans-serif;
+$header-fonts: 'Myriad Pro Semibold', Sans-serif;

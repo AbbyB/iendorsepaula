@@ -1,7 +1,7 @@
 header {
   width: 100vw;
   background-color: var(--header-background);
-  color: $booker-yellow;
+  color: $secondary-color;
   padding: $vertical-padding $horizontal-padding;
   @include flex(flex, column, center, flex-start);
 
