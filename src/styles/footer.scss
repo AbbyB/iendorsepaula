@@ -1,6 +1,6 @@
 footer {
   width: 100vw;
-  background-color: $secondary-color;
+  background-color: var(--footer-background);
   padding: $vertical-small 0;
 
   .disclaimer {

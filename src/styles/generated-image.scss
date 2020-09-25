@@ -149,14 +149,6 @@ div#generated-image {
       background-color: rgba($tertiary-color, 0.3);
     }
   }
-  &.royalBg {
-    .background-color {
-      background-color: $quaternary-color;
-    }
-    .overlay-color {
-      background-color: rgba($quaternary-color, 0.3);
-    }
-  }
 
   // text and avatar z-index because html2canvas on safari cannot take negative zindex
   .avatar,

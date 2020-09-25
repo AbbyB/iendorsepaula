@@ -3,9 +3,11 @@ import { Facebook, Twitter, YouTube, Instagram } from '@material-ui/icons';
 import { ReactComponent as HeaderLogo } from './img/header-logo.svg';
 import defaultPhoto from './img/default.jpg';
 import disclaimer from './img/disclaimer.png';
-import photo1 from './img/photo1.png';
+import photo1 from './img/photo1.jpg';
 import photo2 from './img/photo2.jpg';
 import photo3 from './img/photo3.jpg';
+import photo4 from './img/photo4.jpg';
+import photo5 from './img/photo5.png';
 import './App.scss';
 import ImageGenerator from './ImageGenerator';
 import html2canvas from 'html2canvas';
@@ -225,14 +227,6 @@ class App extends Component {
 										checked={this.state.bgColor === 'tealBg'}
 										onChange={this.handleChange}
 									/>
-									<input
-										type="radio"
-										name="bgColor"
-										id="royalBG"
-										value="royalBg"
-										checked={this.state.bgColor === 'royalBg'}
-										onChange={this.handleChange}
-									/>
 									<label htmlFor="bgColor">Color</label>
 								</div>
 
@@ -271,6 +265,28 @@ class App extends Component {
 												onChange={this.handleChange}
 											/>
 											<img src={photo3} name="photo3" alt="" />
+										</div>
+										<div className="img-radio">
+											<input
+												type="radio"
+												name="bgPhoto"
+												id="choice-4"
+												value={photo4}
+												checked={this.state.bgPhoto === photo4}
+												onChange={this.handleChange}
+											/>
+											<img src={photo4} name="photo4" alt="" />
+										</div>
+										<div className="img-radio">
+											<input
+												type="radio"
+												name="bgPhoto"
+												id="choice-5"
+												value={photo5}
+												checked={this.state.bgPhoto === photo5}
+												onChange={this.handleChange}
+											/>
+											<img src={photo5} name="photo5" alt="" />
 										</div>
 									</div>
 

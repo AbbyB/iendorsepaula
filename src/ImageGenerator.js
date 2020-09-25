@@ -38,7 +38,7 @@ export default function ImageGenerator(props) {
       {/* fine print */}
       <div className="fine-print" style={{ zIndex: 3 }}>
         <p>
-          Generated at IEndorsePaulaJean.COM{' '}
+          Generated at IEndorsePaulaJean.com{' '}
           <span className="bold">#IEndorsePaulaJean</span>
         </p>
         <img src={endorsementLogo} alt="Paula Jean logo" />

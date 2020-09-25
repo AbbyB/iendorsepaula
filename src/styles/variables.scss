@@ -21,19 +21,23 @@ $white: #F3F1F1;
 
 :root {
   --color-Link: hsl(202, 65%, 63%);
+  --header-background: #{$primary-color};
+  --header-title: #{$white};
+  --header-text: #{$tertiary-color};
   --body-background: white;
   --body-text: hsl(0, 0%, 13%);
-  --header-background: #5F2787;
-  --header-text: #F3F1F1;
+  --footer-background: #{$tertiary-color};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-Link: hsl(202, 65%, 63%);
+    --header-background: #{$secondary-color};
+    --header-title: #202020;
+    --header-text: #{$primary-color};
     --body-background: #202020;
     --body-text: hsl(0, 0%, 87%);
-    --header-background: #51A3D4;
-    --header-text: #5F2787;
+    --footer-background: #{$primary-color};
   }
 }
 

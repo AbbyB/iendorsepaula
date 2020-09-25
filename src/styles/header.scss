@@ -6,18 +6,20 @@ header {
   @include flex(flex, column, center, flex-start);
 
   // logo
-  svg{
-    width: 25%;
+  svg {
+    width: 60%;
+    height: auto;
     margin-bottom: $vertical-padding;
 
-    .svg-name{ fill: var(--header-text); }
-    .svg-n, .svg-y{ fill: var(--header-text); }
+    .svg-logo { fill: var(--header-text); }
+    .svg-name { fill: var(--header-title); }
+    .svg-race { fill: var(--header-text); }
   }
 
   .text {
     text-align: center;
     width: 60vw;
-    color: var(--header-text);
+    color: var(--header-title);
   }
 
   @media #{$tablet-portrait} {
