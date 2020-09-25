@@ -32,7 +32,7 @@ section.body {
         fill: var(--body-text);
 
         &:hover {
-          fill: $tertiary-color;
+          fill: $secondary-color;
         }
       }
     }
@@ -48,7 +48,7 @@ section.body {
       text-align: center;
 
       &:hover {
-        background-color: $tertiary-color;
+        background-color: $secondary-color;
         color: var(--body-background);
       }
     }

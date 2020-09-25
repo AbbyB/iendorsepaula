@@ -29,15 +29,6 @@ form {
     color: var(--body-text);
     border: 1px solid var(--body-text);
     border-radius: 5px;
-
-    &[type='submit'] {
-      cursor: pointer;
-
-      &:hover {
-        background-color: $tertiary-color;
-        color: var(--body-background);
-      }
-    }
   }
 
   textarea {
