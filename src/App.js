@@ -7,7 +7,8 @@ import photo1 from './img/photo1.jpg';
 import photo2 from './img/photo2.jpg';
 import photo3 from './img/photo3.jpg';
 import photo4 from './img/photo4.jpg';
-import photo5 from './img/photo5.png';
+import photo5 from './img/photo5.jpg';
+import photo6 from './img/photo6.jpg';
 import './App.scss';
 import ImageGenerator from './ImageGenerator';
 import html2canvas from 'html2canvas';
@@ -287,6 +288,17 @@ class App extends Component {
 												onChange={this.handleChange}
 											/>
 											<img src={photo5} name="photo5" alt="" />
+										</div>
+										<div className="img-radio">
+											<input
+												type="radio"
+												name="bgPhoto"
+												id="choice-6"
+												value={photo6}
+												checked={this.state.bgPhoto === photo6}
+												onChange={this.handleChange}
+											/>
+											<img src={photo6} name="photo6" alt="" />
 										</div>
 									</div>
 
