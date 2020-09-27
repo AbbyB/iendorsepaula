@@ -55,8 +55,10 @@ div#generated-image {
         width: fit-content;
         i {
           color: $tertiary-color;
+          padding-right: 5px;
         }
         line-height: 1.2;
+        font-size: 38px;
         &.name-output{ margin-bottom: 2px; }
       }
     }
@@ -190,7 +192,7 @@ div#generated-image {
         margin-left: 20px;
 
         h2 {
-          font-size: 25px;
+          font-size: 22px;
         }
       }
 

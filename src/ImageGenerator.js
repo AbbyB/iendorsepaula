@@ -23,10 +23,8 @@ export default function ImageGenerator(props) {
 
         {/* endorsement */}
         <div className="endorsement">
-          <h2 className="name-output">{props.name}</h2>
-          <h2>
-            <i>endorses</i> Paula Jean
-          </h2>
+          <h2 className="name-output">{props.name} <i>endorses</i></h2>
+          <h2>Paula Jean for U.S. Senate</h2>
         </div>
 
         <div className="blurb">
