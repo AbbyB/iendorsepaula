@@ -14,6 +14,10 @@ import ImageGenerator from './ImageGenerator';
 import html2canvas from 'html2canvas';
 import fitty from 'fitty';
 
+const defaultName = 'Your Name Here';
+const defaultLocation = 'Voter, United States of America';
+const defaultBlurb = 'I support Paula Jean, a coal miner\'s daughter from West Virginia, because she is a fierce advocate for the people. We need Paula Jean in the US Senate.';
+
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -313,10 +317,10 @@ class App extends Component {
 						{
 							<div>
 								<ImageGenerator
-									name={this.state.name ? this.state.name : 'Your Name Here'}
-									location={this.state.location ? this.state.location : 'Voter, United States of America'}
+									name={this.state.name ? this.state.name : defaultName}
+									location={this.state.location ? this.state.location : defaultLocation}
 									file={this.state.file}
-									blurb={this.state.blurb}
+									blurb={this.state.blurb ? this.state.blurb : defaultBlurb}
 									bgColor={this.state.bgColor}
 									bgPhoto={this.state.bgPhoto}
 								/>
