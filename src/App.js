@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Facebook, Twitter, YouTube, Instagram } from '@material-ui/icons';
-import { ReactComponent as HeaderLogo } from './img/header-logo.svg';
+import { Button, Grid, Link } from '@material-ui/core';
+import { Facebook, Instagram, Twitter, YouTube } from '@material-ui/icons';
+
+import {ReactComponent as HeaderLogo} from './img/header-logo.svg';
 import defaultPhoto from './img/default.jpg';
 import disclaimer from './img/disclaimer.png';
 import photo1 from './img/photo1.jpg';
@@ -9,6 +11,7 @@ import photo3 from './img/photo3.jpg';
 import photo4 from './img/photo4.jpg';
 import photo5 from './img/photo5.jpg';
 import photo6 from './img/photo6.jpg';
+
 import './App.scss';
 import ImageGenerator from './ImageGenerator';
 import html2canvas from 'html2canvas';
@@ -366,6 +369,60 @@ class App extends Component {
 								If you like this, please follow me on social media — and say
 								hello! And when you share your image include the hashtag{' '}
 								<span className="bold">#IEndorsePaulaJean</span>.
+							</p>
+						</div>
+
+						{/* donate */}
+						<div className="donate">
+							<p>
+								Our campaign will <i>never</i> take corporate cash. Every single dollar counts.
+							</p>
+							<div className="donateButtons">
+								<Grid container spacing={2}>
+									<Grid item xs>
+										<Button component={ Link } href="https://secure.actblue.com/donate/paula-jean-swearengin-2020?express_lane=true&amount=15&refcode=home-express_lane">
+											$15
+										</Button>
+									</Grid>
+									<Grid item xs>
+										<Button component={ Link } href="https://secure.actblue.com/donate/paula-jean-swearengin-2020?express_lane=true&amount=27&refcode=home-express_lane">
+											$27
+										</Button>
+									</Grid>
+									<Grid item xs>
+										<Button component={ Link } href="https://secure.actblue.com/donate/paula-jean-swearengin-2020?express_lane=true&amount=50&refcode=home-express_lane">
+											$50
+										</Button>
+									</Grid>
+									<Grid item xs>
+										<Button component={ Link } href="https://secure.actblue.com/donate/paula-jean-swearengin-2020?express_lane=true&amount=100&refcode=home-express_lane">
+											$100
+										</Button>
+									</Grid>
+									<Grid item xs>
+										<Button component={ Link } href="https://secure.actblue.com/donate/paula-jean-swearengin-2020?express_lane=true&amount=250&refcode=home-express_lane">
+											$250
+										</Button>
+									</Grid>
+									<Grid item xs>
+										<Button component={ Link } href="https://secure.actblue.com/donate/paula-jean-swearengin-2020?express_lane=true&amount=500&refcode=home-express_lane">
+											$500
+										</Button>
+									</Grid>
+									<Grid item xs>
+										<Button component={ Link } href="https://secure.actblue.com/donate/paula-jean-swearengin-2020?express_lane=true&amount=1000&refcode=home-express_lane">
+											$1000
+										</Button>
+									</Grid>
+									<Grid item xs>
+										<Button component={ Link } href="https://secure.actblue.com/donate/paula-jean-swearengin-2020?express_lane_other=true&refcode=express_lane_other">
+											OTHER
+										</Button>
+									</Grid>
+								</Grid>
+							</div>
+							<p>
+								If you've saved payment information with ActBlue Express, your donation will go through immediately.
 							</p>
 						</div>
 					</div>
